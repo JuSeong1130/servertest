@@ -43,6 +43,7 @@ jobs:
         first_ssh: echo "BE 배포 시작"
         scp: ./build/libs/* => ${{ secrets.SERVER_BUILD_PATH_APP }} #/home/juseong/backend
         last_ssh: | # 아래명령어를 여러개 실행시켜줌 차례대로
+          chmod +x deploy.sh
           ./deploy.sh
           echo "BE 배포 결과 확인 : "
           ls -al
