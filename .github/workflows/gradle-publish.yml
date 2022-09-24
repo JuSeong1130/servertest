@@ -30,7 +30,7 @@ jobs:
       run: chmod +x ./gradlew #빌드 하기위한 권환 부여
       
     - name: Build with Gradle
-      run: ./gradlew build -x asciidoctor 
+      run: ./gradlew build 
      #graldew는 Gradle의 실행 파일 버전이며, build 명령을 실행하면, 테스트 > 빌드 작업이 일어나서 후에는 build/libs/${project_name}-0.0.1-SNAPSHOT.jar 파일이 만들어집니다.
      
     - name: scp-ssh-pipelines
